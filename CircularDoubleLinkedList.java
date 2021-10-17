@@ -48,6 +48,7 @@ public class CircularDoubleLinkedList {
         Node n = new Node(element);
         Node aux = getNodeIndex(indexOfPointer());
         n.next = aux.next;
+        aux.next.prev = n;
         aux.next = n;
         n.prev = aux;
         if (aux.prev == aux) {
@@ -63,8 +64,9 @@ public class CircularDoubleLinkedList {
         Node n = new Node(element);
         Node aux = getNodeIndex(indexOfPointer());
         n.next = aux;
-        aux.prev = n;
+        aux.prev.next = n;
         n.prev = aux.prev;
+        aux.prev = n;
         if (aux.next == aux) {
             aux.next = n;
         }
@@ -166,6 +168,8 @@ public class CircularDoubleLinkedList {
                 pointer.next = pointer.next.prev;
             }
         }
+        System.out.println("Novo valor do pointer: " + valorPointer());
+        System.out.println();
     }
     
     /**
