@@ -161,14 +161,14 @@ public class CircularDoubleLinkedList {
      * @param number quantidade de elementos que se quer mover o pointer
      * @param direction direção na qual se quer mover o pointer
      */
-    public void movePointer(int number, String direction) { 
-        if (direction == "right") {
-            for (int i=0; i<number; i++) {
+    public void movePointer(int number) {
+        if (number % 2 == 0) {
+            for (int i=0; i<5; i++) {
                 pointer.next = pointer.next.next;
             }
         }
-        else if (direction == "left") {
-            for (int i=0; i<number; i++) {
+        else {
+            for (int i=0; i<5; i++) {
                 pointer.next = pointer.next.prev;
             }
         }
