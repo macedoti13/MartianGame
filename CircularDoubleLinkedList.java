@@ -42,7 +42,7 @@ public class CircularDoubleLinkedList {
 
     /**
      * Metodo para adcionar um elemento na frente do elemento do pointer
-     * @param element elemtento que se quer adicionar
+     * @param element elemtento que se quer adicionado
      */
     public void addInFront(Integer element) {
         Node n = new Node(element);
@@ -60,6 +60,10 @@ public class CircularDoubleLinkedList {
         count++;
     }
 
+    /**
+     * Metodo para adcionar um elemento atras do elemento do pointer
+     * @param element elemento que vai ser adcionado
+     */
     public void addBehind(Integer element) {
         Node n = new Node(element);
         Node aux = getNodeIndex(indexOfPointer());
@@ -140,10 +144,10 @@ public class CircularDoubleLinkedList {
     }
 
     /**
-     * Metodo para obter o index do pointer
+     * Metodo para obter o index do pointer 
      * @return index do pointer
      */
-    public int indexOfPointer() {
+    public int indexOfPointer() { 
         for (int i=0; i<count; i++) {
             if (getNodeIndex(i) == pointer.next) {
                 return i;
@@ -168,12 +172,10 @@ public class CircularDoubleLinkedList {
                 pointer.next = pointer.next.prev;
             }
         }
-        System.out.println("Novo valor do pointer: " + valorPointer());
-        System.out.println();
     }
     
     /**
-     * Metodo para obter o valor do elemento do node apontado pelo pointer
+     * Metodo para obter o valor do elemento do node apontado pelo pointer 
      * @return valor do pointer
      */
     public Integer valorPointer() {
@@ -181,7 +183,7 @@ public class CircularDoubleLinkedList {
     }
 
     /**
-     * Metodo para printar todos os elementos do circulo e o valor do pointer
+     * Metodo para printar todos os elementos do circulo e o valor do pointer 
      */
     public void printCirculo() {
         for (int i=0; i<count; i++) {
