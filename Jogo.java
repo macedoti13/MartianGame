@@ -3,7 +3,8 @@ public class Jogo {
     CircularDoubleLinkedList c = new CircularDoubleLinkedList();
 
     public int jogada(int n, int firstn) {
-        if (n==1) {
+        if (n <= 1) {
+            System.out.print("Elementos no circulo no fim do jogo: ");
             return c.count;
         }
         else {
