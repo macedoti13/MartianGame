@@ -23,7 +23,7 @@ public class Jogo {
                 c.addBehind(n/2);
                 c.addInFront(n/2);
                 c.changePointerNodeValue(n/2);
-                c.movePointer(n);
+                c.movePointer(firstn);
                 if (firstn <= 20) {
                     c.printCirculo();
                 }
@@ -37,7 +37,7 @@ public class Jogo {
                 c.addBehind(n-1);
                 c.addInFront(n-1);
                 c.changePointerNodeValue(n-1);
-                c.movePointer(n);
+                c.movePointer(firstn);
                 if (firstn <= 20) {
                     c.printCirculo();
                 }

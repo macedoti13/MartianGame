@@ -163,12 +163,12 @@ public class CircularDoubleLinkedList {
      */
     public void movePointer(int number) {
         if (number % 2 == 0) {
-            for (int i=0; i<5; i++) {
+            for (int i=0; i<number; i++) {
                 pointer.next = pointer.next.next;
             }
         }
         else {
-            for (int i=0; i<5; i++) {
+            for (int i=0; i<number; i++) {
                 pointer.next = pointer.next.prev;
             }
         }
