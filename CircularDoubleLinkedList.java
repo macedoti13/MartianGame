@@ -157,9 +157,9 @@ public class CircularDoubleLinkedList {
     }
 
     /**
-     * Metodo para mover o pointer entre os elementos do circulo
-     * @param number quantidade de elementos que se quer mover o pointer
-     * @param direction direção na qual se quer mover o pointer
+     * Metodo utilizado para mover o pointer entre os elementos da lista. Se o parametro for par, ele move o pointer cinco
+     * posições pra direita. Se for impar, move o pointer cinco posições pra esquerda.
+     * @param number numero do pointer antes da troca.
      */
     public void movePointer(int number) {
         if (number % 2 == 0) {
